@@ -16,3 +16,9 @@
 [submodule ".vim/pack/vim-go/start/vim-go"]
 	path = .vim/pack/vim-go/start/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/pack/ack-plugin/start/ack"]
+	path = .vim/pack/ack-plugin/start/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule ".vim/pack/plugins/start/lightline"]
+	path = .vim/pack/plugins/start/lightline
+	url = https://github.com/itchyny/lightline.vim.git
