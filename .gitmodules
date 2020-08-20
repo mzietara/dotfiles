@@ -1,0 +1,18 @@
+[submodule ".vim/pack/vendor/start/nerdtree"]
+	path = .vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/tpope/start/fugitive"]
+	path = .vim/pack/tpope/start/fugitive
+	url = https://tpope.io/vim/fugitive.git
+[submodule ".vim/pack/airblade/start/vim-gitgutter"]
+	path = .vim/pack/airblade/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/pack/scrooloose/start/syntastic"]
+	path = .vim/pack/scrooloose/start/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule ".vim/pack/git-plugins/start/ale"]
+	path = .vim/pack/git-plugins/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule ".vim/pack/vim-go/start/vim-go"]
+	path = .vim/pack/vim-go/start/vim-go
+	url = https://github.com/fatih/vim-go.git
