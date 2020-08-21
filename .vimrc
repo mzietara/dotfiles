@@ -25,6 +25,12 @@ let mapleader=" "
 " Turn on syntax highlighting
 syntax on
 
+" Lightline fix
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+
 " Security
 set modelines=0
 

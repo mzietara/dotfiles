@@ -22,3 +22,6 @@
 [submodule ".vim/pack/plugins/start/lightline"]
 	path = .vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim.git
+[submodule ".vim/pack/themes/opt/solarized8"]
+	path = .vim/pack/themes/opt/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git

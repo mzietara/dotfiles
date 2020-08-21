@@ -119,3 +119,4 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export GOPATH=$HOME/go
+export TERM=xterm-256color
