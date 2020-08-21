@@ -148,3 +148,10 @@ inoremap <expr> <c-k> ("\<C-p>")
 
 " saving files quickly with <Esc><Esc>
 map <Esc><Esc> :w<CR>
+
+" Have undo history persist through a session
+" https://stackoverflow.com/questions/17936130/vim-undo-undo-changes-after-file-write
+if has('persistent_undo')      "check if your vim version supports it
+  set undofile                 "turn on the feature  
+  set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+endif 
