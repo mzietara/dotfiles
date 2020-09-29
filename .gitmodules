@@ -25,3 +25,6 @@
 [submodule ".vim/pack/themes/opt/solarized8"]
 	path = .vim/pack/themes/opt/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule ".vim/pack/fzf/start/fzf"]
+  path = .vim/pack/fzf/start/fzf
+  url = https://github.com/junegunn/fzf 

@@ -113,8 +113,8 @@ nnoremap <C-H> <C-W>h
 
 " fzf stuff
 set rtp+=~/.fzf
-map <leader>p :FZF<CR>
-map <leader>P :FZF<space>
+map <leader>f :FZF<CR>
+map <leader>F :FZF<space>
 
 filetype plugin on
 
@@ -156,5 +156,3 @@ if has('persistent_undo')      "check if your vim version supports it
   set undofile                 "turn on the feature  
   set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 endif 
-
-nmap <silent> <leader>p :set paste<CR>"*p:set nopaste<CR>"
