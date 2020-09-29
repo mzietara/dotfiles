@@ -64,6 +64,7 @@ set noshiftround
 " Nerdtree
 map <leader>n :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr>
+let g:NERDTreeQuitOnOpen = 1
 
 " Ack
 map <leader>a :Ack!<space>
@@ -155,3 +156,5 @@ if has('persistent_undo')      "check if your vim version supports it
   set undofile                 "turn on the feature  
   set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 endif 
+
+nmap <silent> <leader>p :set paste<CR>"*p:set nopaste<CR>"
