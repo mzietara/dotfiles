@@ -9,6 +9,8 @@
 " Remaps the Escape Key to 'jj'
 imap jj <Esc>
 
+set ignorecase
+
 " [A]  to insert at EOL
 
 " Don't try to be vi compatible
