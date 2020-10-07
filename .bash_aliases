@@ -15,3 +15,8 @@ alias ll="ls -la"
 
 # Print my public IP
 alias myip='curl ipinfo.io/ip'
+
+# easier to go back
+alias .="cd . & ll"
+alias ..="cd .. & ll"
+
