@@ -1,6 +1,9 @@
 [submodule ".vim/pack/vendor/start/nerdtree"]
 	path = .vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/tpope/start/dispatch"]
+	path = .vim/pack/tpope/start/dispatch
+	url = https://tpope.io/vim/dispatch.git
 [submodule ".vim/pack/tpope/start/fugitive"]
 	path = .vim/pack/tpope/start/fugitive
 	url = https://tpope.io/vim/fugitive.git

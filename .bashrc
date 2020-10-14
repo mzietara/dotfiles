@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -115,3 +115,8 @@ fi
 
 export GOPATH=$HOME/go
 export TERM=xterm-256color
+
+# Bulk search and replace with ag
+# https://gist.github.com/hlissner/db74d23fc00bed81ff62
+function agr { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g";  }
+export -f agr
