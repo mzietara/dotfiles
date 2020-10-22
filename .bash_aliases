@@ -20,3 +20,5 @@ alias myip='curl ipinfo.io/ip'
 alias .="cd . & ll"
 alias ..="cd .. & ll"
 
+# current coding workspace
+alias ws='cd ~/integreatly/apps/igy/src/integreat.ly'

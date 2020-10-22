@@ -113,7 +113,7 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export GOPATH=$HOME/go
+export GOPATH=$HOME/integreatly/apps/igy/
 export TERM=xterm-256color
 
 # Bulk search and replace with ag
