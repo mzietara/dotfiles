@@ -115,6 +115,7 @@ fi
 
 export GOPATH=$HOME/integreatly/apps/igy/
 export TERM=xterm-256color
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Bulk search and replace with ag
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
