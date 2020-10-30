@@ -7,7 +7,7 @@
 " [gg] to get to beginning of file
 
 " Remaps the Escape Key to 'jj'
-imap jj <Esc>
+imap jj <Esc>:w<CR>
 
 set ignorecase
 
@@ -65,7 +65,7 @@ set noshiftround
 
 " Nerdtree
 map <leader>n :NERDTreeToggle<CR>
-map <leader>r :NERDTreeFind<cr>
+map <leader>m :NERDTreeFind<cr>
 let g:NERDTreeQuitOnOpen = 1
 
 " Ack
@@ -150,9 +150,6 @@ set autowrite
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" saving files quickly with <Esc><Esc>
-map <Esc><Esc> :w<CR>
-
 " Have undo history persist through a session
 " https://stackoverflow.com/questions/17936130/vim-undo-undo-changes-after-file-write
 if has('persistent_undo')      "check if your vim version supports it
@@ -162,10 +159,10 @@ endif
 
 ""https://stackoverflow.com/questions/597687/how-to-quickly-change-variable-names-in-vim 
 " For local replace
-nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+nnoremap <leader>r gd[{V%::s/<C-R>///gc<left><left><left>
 
 " For global replace
-nnoremap gR gD:%s/<C-R>///gc<left><left><left>"}]
+nnoremap <leader>R gD:%s/<C-R>///gc<left><left><left>"}]
 
 " fugitive git bindings
 nnoremap <leader>ga :Git add %:p<CR><CR>
@@ -173,13 +170,11 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit -v -q<CR>
 nnoremap <leader>gt :Gcommit -v -q %:p<CR>
 nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>ge :Gedit<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gw :Gwrite<CR><CR>
-nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <leader>gp :Ggrep<Space>
-nnoremap <leader>gm :Gmove<Space>
 nnoremap <leader>gb :Git branch<Space>
-nnoremap <leader>go :Git checkout<Space>
 nnoremap <leader>gps :Dispatch! git push<CR>
 nnoremap <leader>gpl :Dispatch! git pull<CR>
+
+""https://vim.fandom.com/wiki/Toggle_auto-indenting_for_code_paste"
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>

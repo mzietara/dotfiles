@@ -17,8 +17,8 @@ alias ll="ls -la"
 alias myip='curl ipinfo.io/ip'
 
 # easier to go back
-alias .="cd . & ll"
-alias ..="cd .. & ll"
+alias .="cd . & ls"
+alias ..="cd .. & ls"
 
 # current coding workspace
-alias ws='cd ~/integreatly/apps/igy/src/integreat.ly'
+alias ws='~/integreatly/apps/igy/src/integreat.ly'
