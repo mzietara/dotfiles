@@ -100,6 +100,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Usefule functions to use with bash
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -115,9 +120,16 @@ fi
 
 export GOPATH=$HOME/integreatly/apps/igy/
 export TERM=xterm-256color
-export PATH=$PATH:$(go env GOPATH)/bin
 
-# Bulk search and replace with ag
-# https://gist.github.com/hlissner/db74d23fc00bed81ff62
-function agr { ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g";  }
-export -f agr
+# Path exports
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.profile
+
+function replace () {
+  files=$1
+  searchFor=$2
+  replace=$3
+  rg $files --files-with-matches | xargs sed -i 's/${searchFor}/${replace}/g'
+  echo Done!
+}
