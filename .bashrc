@@ -100,6 +100,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# These are useful functions for bash commands
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -116,6 +121,7 @@ fi
 export GOPATH=$HOME/integreatly/apps/igy/
 export TERM=xterm-256color
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$HOME/.linuxbrew/bin:$PATH"
 
 # Bulk search and replace with ag
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
