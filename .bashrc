@@ -100,11 +100,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-<<<<<<< HEAD
-# Usefule functions to use with bash
-=======
 # These are useful functions for bash commands
->>>>>>> 9dc0bd8690fbab2fe64e37fdb2e55d483d31a47f
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
