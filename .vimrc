@@ -7,7 +7,8 @@
 " [gg] to get to beginning of file
 
 " Remaps the Escape Key to 'jj'
-imap jj <Esc>:w<CR>
+imap jj <Esc><CR>
+imap <leader>j :w<CR>
 
 set ignorecase
 
