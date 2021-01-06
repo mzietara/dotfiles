@@ -127,6 +127,8 @@ export PATH="$HOME/.linuxbrew/bin:$PATH"
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.profile
+#LS_COLORS=$LS_COLORS:'di=0;36:' ; export LS_COLORS
+#~/.local/share/lscolors.sh
 
 function replace () {
   files=$1
