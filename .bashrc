@@ -100,11 +100,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-<<<<<<< HEAD
-# Usefule functions to use with bash
-=======
 # These are useful functions for bash commands
->>>>>>> 9dc0bd8690fbab2fe64e37fdb2e55d483d31a47f
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
@@ -124,11 +120,8 @@ fi
 
 export GOPATH=$HOME/integreatly/apps/igy/
 export TERM=xterm-256color
-<<<<<<< HEAD
-=======
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$HOME/.linuxbrew/bin:$PATH"
->>>>>>> 9dc0bd8690fbab2fe64e37fdb2e55d483d31a47f
 
 # Path exports
 export PATH=$PATH:$(go env GOPATH)/bin

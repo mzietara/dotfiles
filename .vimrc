@@ -7,7 +7,8 @@
 " [gg] to get to beginning of file
 
 " Remaps the Escape Key to 'jj'
-imap jj <Esc>:w<CR>
+imap <leader>j <Esc>:w<CR>
+"imap jj <Esc>
 
 set ignorecase
 
@@ -21,8 +22,6 @@ set nocompatible
 let mapleader=" "
 
 " [Go] go to end of file
-
-"nmap <Leader>j 
 
 " Turn on syntax highlighting
 syntax on
@@ -147,8 +146,8 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 " Golang mappings
-autocmd FileType go    nnoremap <buffer> <leader>j :GoTest<CR>
-autocmd FileType go    nnoremap <buffer> <leader>k :GoRun<CR>
+autocmd FileType go    nnoremap <buffer> <leader>k :GoTest<CR>
+autocmd FileType go    nnoremap <buffer> <leader>l :GoRun<CR>
 
 set hlsearch
 
@@ -170,13 +169,6 @@ set autowrite
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-" Have undo history persist through a session
-" https://stackoverflow.com/questions/17936130/vim-undo-undo-changes-after-file-write
-if has('persistent_undo')      "check if your vim version supports it
-  set undofile                 "turn on the feature  
-  set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
-endif 
-
 ""https://stackoverflow.com/questions/597687/how-to-quickly-change-variable-names-in-vim 
 " For local replace
 nnoremap <leader>r gd[{V%::s/<C-R>///gc<left><left><left>
@@ -195,6 +187,11 @@ nnoremap <leader>gps :Dispatch! git push<CR>
 nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 ""https://vim.fandom.com/wiki/Toggle_auto-indenting_for_code_paste"
-nnoremap <F2> :set invpaste paste?<CR>
-imap <F2> <C-O>:set invpaste paste?<CR>
-set pastetoggle=<F2>
+set pastetoggle=<leader>p
+
+" Use persistent history.
+if !isdirectory("/tmp/.vim-undo-dir")
+    call mkdir("/tmp/.vim-undo-dir", "", 0700)
+endif
+set undodir=/tmp/.vim-undo-dir
+set undofile
