@@ -123,15 +123,7 @@ export TERM=xterm-256color
 export PATH=$PATH:$(go env GOPATH)/bin
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 
-# Path exports
-export PATH=$PATH:$(go env GOPATH)/bin
-export PATH="$HOME/.linuxbrew/bin:$PATH"
 echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.profile
 
-function replace () {
-  files=$1
-  searchFor=$2
-  replace=$3
-  rg $files --files-with-matches | xargs sed -i 's/${searchFor}/${replace}/g'
-  echo Done!
-}
+git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff

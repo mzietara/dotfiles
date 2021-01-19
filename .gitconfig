@@ -1,3 +1,9 @@
 [user]
 	email = zietaramark@gmail.com
 	name = Mark Zietara
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
