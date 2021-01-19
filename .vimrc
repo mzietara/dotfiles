@@ -188,14 +188,3 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 ""https://vim.fandom.com/wiki/Toggle_auto-indenting_for_code_paste"
 set pastetoggle=<leader>p
-
-" Use persistent history.
-if !isdirectory("/tmp/.vim-undo-dir")
-    call mkdir("/tmp/.vim-undo-dir", "", 0700)
-endif
-set undodir=/tmp/.vim-undo-dir
-set undofile
-  call mkdir("/tmp/.vim-undo-dir", "", 0700)
-endif
-set undodir=/tmp/.vim-undo-dir
-set undofile
