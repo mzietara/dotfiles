@@ -119,14 +119,14 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export TERM=xterm-256color
-export GOPATH=$HOME/integreatly/apps/igy/
-export PATH=$PATH:~/integreatly/apps/igy/bin
-export PATH=$PATH:/usr/local/go/bin
 
+export GOPATH=$HOME/integreatly/apps/igy/
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 git config --global diff.tool vimdiff
 git config --global merge.tool vimdiff
 
-cd ~/code/integreatly
-LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
-
+alias gs='git status'
+alias gl='git log'
+alias ga='git add . '
