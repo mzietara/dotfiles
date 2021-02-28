@@ -56,8 +56,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-
-
 # get current branch in git repo
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -105,7 +103,7 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[36;40m\]\u\[\e[m\]\[\e[36;40m\]@\[\e[m\]\[\e[36;40m\]\h\[\e[m\]\[\e[33;40m\]\`parse_git_branch\`\[\e[m\]\[\e[37;46m\]\\$\[\e[m\] "
+export PS1="\[\e[36;40m\]\u\[\e[m\]\[\e[36;40m\]@\[\e[m\]\[\e[36;40m\]\h\[\e[m\] \[\e[33m\]\W\[\e[m\]\[\e[33;40m\]\`parse_git_branch\`\[\e[m\]\[\e[37;46m\]\\$\[\e[m\] "
 
 
 # enable color support of ls and also add handy aliases
