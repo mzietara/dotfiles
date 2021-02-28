@@ -8,7 +8,7 @@
 
 " Remaps the Escape Key to 'jj'
 imap <leader>j <Esc>:w<CR>
-"imap jj <Esc>
+imap jj <Esc>
 
 set ignorecase
 
@@ -51,8 +51,8 @@ set visualbell
 set encoding=utf-8
 
 " Whitespace
-set wrap
-set textwidth=79
+"set wrap
+"set textwidth=79
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
@@ -103,7 +103,7 @@ colorscheme solarized8
 let g:ackprg = 'rg --vimgrep --type-not sql --smart-case'
 
 " Auto close the Quickfix list after pressing '<enter>' on a list item
-let g:ack_autoclose = 1
+"let g:ack_autoclose = 1
 
 " Any empty ack search will search for the work the cursor is on
 let g:ack_use_cword_for_empty_search = 1
@@ -112,7 +112,7 @@ let g:ack_use_cword_for_empty_search = 1
 cnoreabbrev Ack Ack!
 
 " Maps <leader>/ so we're ready to type the search keyword
-nnoremap <Leader>/ :Ack!<Space>
+nnoremap <Leader>/ :Ack!<Space>""<left>
 " }}}
 
 " Navigate quickfix list with ease
@@ -156,7 +156,6 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:go_list_type = "quickfix"
 
 nnoremap <leader>x <C-t>
-nnoremap <leader>c <C-]>
 
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
@@ -188,3 +187,9 @@ nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 ""https://vim.fandom.com/wiki/Toggle_auto-indenting_for_code_paste"
 set pastetoggle=<leader>p
+
+"SO set-vim-background-transparent
+hi Normal guibg=NONE ctermbg=NONE
+
+map <leader><leader>/ /<C-r><C-w><CR><leader>/<C-r><C-w><cr>
+map <leader>v :tabnew ~/.vimrc<cr>G

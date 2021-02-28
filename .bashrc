@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -118,12 +118,15 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export GOPATH=$HOME/integreatly/apps/igy/
 export TERM=xterm-256color
-export PATH=$PATH:$(go env GOPATH)/bin
-export PATH="$HOME/.linuxbrew/bin:$PATH"
+export GOPATH=$HOME/integreatly/apps/igy/
+export PATH=$PATH:~/integreatly/apps/igy/bin
+export PATH=$PATH:/usr/local/go/bin
 
-echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> ~/.profile
 
 git config --global diff.tool vimdiff
 git config --global merge.tool vimdiff
+
+cd ~/code/integreatly
+LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+
