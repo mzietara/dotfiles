@@ -31,3 +31,9 @@
 [submodule ".vim/pack/fzf/start/fzf"]
   path = .vim/pack/fzf/start/fzf
   url = https://github.com/junegunn/fzf 
+[submodule ".vim/pack/plugins/start/tagbar"]
+	path = .vim/pack/plugins/start/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule ".vim/pack/plugins/start/nerdtree-git-plugin"]
+	path = .vim/pack/plugins/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
