@@ -37,3 +37,6 @@
 [submodule ".vim/pack/plugins/start/nerdtree-git-plugin"]
 	path = .vim/pack/plugins/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule ".vim/pack/vim-todo-lists/start/vim-todo-lists"]
+	path = .vim/pack/vim-todo-lists/start/vim-todo-lists
+	url = https://github.com/aserebryakov/vim-todo-lists.git
